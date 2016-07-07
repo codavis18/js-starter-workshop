@@ -5,7 +5,11 @@ let num = 0;
 
 function counter() {
   num++;
-  $('#main').html(`You have been on this page for ${num} seconds.`);
+  if (num === 1) {
+    $('#main').html(`You have been on this page for ${num} second.`);
+  } else {
+    $('#main').html(`You have been on this page for ${num} seconds.`);
+  }
 }
 
 setInterval(counter, 1000);
